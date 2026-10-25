@@ -22,20 +22,12 @@ SKJOLD.produkter = [
 ];
 
 /*
- * Fotos fra Wikimedia Commons (frie licenser – se `kredit`).
- * Hentes via Special:FilePath, som peger på den aktuelle billedfil.
+ * Klubbens egne fotos i img/fotos/.
  */
 SKJOLD.fotos = {
-  hero: { fil: 'FPYC_Soccer_-_02.JPG', kredit: 'Jarek Tuszyński, CC BY-SA' },
-  ungdom: { fil: 'FPYC_Soccer_-_01.JPG', kredit: 'Jarek Tuszyński, CC BY-SA' },
-  kamp: { fil: 'FPYC_Soccer_-_03.JPG', kredit: 'Jarek Tuszyński, CC BY-SA' },
-  dreng: { fil: 'A-Boy-Playing-Football.jpg', kredit: 'Pavan Prasad, CC0' },
-  bold: { fil: 'Football_on_fall_ground_(Unsplash).jpg', kredit: 'Unsplash via Wikimedia Commons, CC0' },
-  faelledparken: { fil: 'Fælledparken_og_Parken_stadion_aerial.jpg', kredit: 'Stig Nygaard, CC BY' },
+  fejring: 'img/fotos/fejring.jpg',
+  kampdag: 'img/fotos/kampdag.jpg',
+  stadion: 'img/fotos/stadion.jpg',
+  frokost: 'img/fotos/frokost.jpg',
+  medlemmer: 'img/fotos/medlemmer.jpg',
 };
-
-SKJOLD.fotoUrl = (navn, bredde = 1600) => {
-  const f = SKJOLD.fotos[navn];
-  return f ? `https://commons.wikimedia.org/wiki/Special:FilePath/${encodeURIComponent(f.fil)}?width=${bredde}` : null;
-};
-SKJOLD.fotoSide = (navn) => `https://commons.wikimedia.org/wiki/File:${encodeURIComponent(SKJOLD.fotos[navn].fil)}`;

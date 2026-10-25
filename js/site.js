@@ -1,7 +1,7 @@
 /*
  * Fælles header, footer, kurv, fotos og produktkort.
  * Hver side angiver <body data-side="…" data-rod="./ eller ../">.
- * Fotos: <div class="foto" data-foto="hero"> (navn fra SKJOLD.fotos).
+ * Fotos: <div class="foto" data-foto="fejring"> (navn fra SKJOLD.fotos).
  */
 (function () {
   const S = window.SKJOLD;
@@ -39,11 +39,6 @@
     </header>`
   );
 
-  const kreditter = Object.keys(S.fotos)
-    .filter((n) => document.querySelector(`[data-foto="${n}"]`))
-    .map((n) => `<a href="${S.fotoSide(n)}">${esc(S.fotos[n].kredit)}</a>`)
-    .join(' · ');
-
   document.body.insertAdjacentHTML(
     'beforeend',
     `<footer>
@@ -55,7 +50,7 @@
         <div><h3>Shop</h3><a href="${rod}shop/#vinter">Vinterkollektion</a><a href="${rod}shop/#spilletoej">Spilletøj</a><a href="${rod}shop/#fritid">Fritid</a><a href="${rod}shop/#udstyr">Udstyr</a></div>
         <div><h3>Klubben</h3><a href="${rod}hold/">Hold og træning</a><a href="${rod}medlem/">Bliv medlem</a><a href="${rod}om/">Om klubben</a><a href="${rod}partnere/">Bliv partner</a></div>
         <div><h3>Kontakt</h3><a href="tel:+4535253525">35 25 35 25</a><a href="mailto:bkskjold@bkskjold.dk">bkskjold@bkskjold.dk</a><a href="https://www.facebook.com/bkskjold1915/">Facebook</a></div>
-        <p class="kilder">Designforslag. Klubfakta fra bkskjold.dk – skal bekræftes af klubben. Priser er eksempler.${kreditter ? ` Fotos fra Wikimedia Commons: ${kreditter}.` : ''}</p>
+        <p class="kilder">Designforslag. Klubfakta fra bkskjold.dk – skal bekræftes af klubben. Priser er eksempler.</p>
       </div>
     </footer>
     <div class="kurv" id="kurv" aria-hidden="true">
@@ -84,7 +79,7 @@
     img.src = url;
     el.appendChild(img);
   };
-  document.querySelectorAll('[data-foto]').forEach((el) => fyldFoto(el, S.fotoUrl(el.dataset.foto, Number(el.dataset.bredde) || 1600), el.dataset.alt));
+  document.querySelectorAll('[data-foto]').forEach((el) => fyldFoto(el, S.fotos[el.dataset.foto] ? rod + S.fotos[el.dataset.foto] : null, el.dataset.alt));
 
   // Produktbilleder
   const produktUrl = (p) => (p.billede ? rod + p.billede : null);

@@ -21,7 +21,7 @@ medlem/        Sådan bliver du medlem (7 trin), kontingent og FAQ
 om/            Historie, Skjold-modellen, bliv træner og kontakt
 partnere/      Bliv partner: eksponering og kontakt
 css/style.css  Design
-js/produkter.js  Shoppens varer og stockfotos – ret her for at skifte varer og billeder
+js/produkter.js  Shoppens varer og sidens fotos – ret her for at skifte varer og billeder
 js/site.js     Fælles header, footer, kurv og produktkort
 img/           Klubbens logo
 ```
@@ -44,13 +44,10 @@ python3 -m http.server 8000
 
 ## Billeder
 
-Fotos fra [Wikimedia Commons](https://commons.wikimedia.org) under frie licenser
-(CC0, CC BY og CC BY-SA). De hentes direkte fra Commons i browseren, og
-fotograf og licens krediteres i footeren på de sider, hvor billedet bruges.
-Billederne er samlet i `SKJOLD.fotos` i `js/produkter.js`.
-
-Kan et billede ikke hentes, vises en lys flade med klubbens logo i stedet for
-et tomt felt. Produkterne vises på samme måde, indtil de får egne billeder.
+Klubbens egne fotos ligger i `img/fotos/` og er samlet i `SKJOLD.fotos` i
+`js/produkter.js`. Kan et billede ikke hentes, vises en lys flade med klubbens
+logo i stedet for et tomt felt. Produkterne vises på samme måde, indtil de får
+egne billeder.
 
 ## Indhold og forbehold
 
