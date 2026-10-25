@@ -1,43 +1,41 @@
 /*
- * Shoppens varer.
+ * Shoppens varer og sidens fotos.
  *
- * EKSEMPELVARER: Navne, priser og billeder er pladsholdere i designforslaget
- * og skal erstattes af klubbens rigtige produkter. Billederne er stockfotos
- * fra Unsplash (gratis under Unsplash-licensen).
- *
- * Felter: id, navn, kategori (vinter | spilletoej | fritid | udstyr), pris (kr.),
- * besk (kort beskrivelse), billede (Unsplash-foto-id eller sti til eget billede
- * – fx 'img/produkter/hue.jpg'), stoerrelser, ny (vises under "Nyt i shoppen").
+ * Varer: Vinterkollektionen (halsedisse, hue, vanter) er klubbens nye produkter.
+ * Priser og øvrige varer er eksempler i designforslaget.
+ * Produktbilleder: læg filen i img/produkter/ og skriv stien i `billede`,
+ * fx 'img/produkter/hue.jpg'. Uden billede vises en lys flade med klublogoet.
  */
 window.SKJOLD = window.SKJOLD || {};
-
-// Eget billede (sti med '/' eller filendelse) eller Unsplash-foto-id.
-SKJOLD.foto = (id, bredde = 1200) =>
-  /[/.]/.test(id) ? (document.body.dataset.rod || './') + id : `https://unsplash.com/photos/${id}/download?w=${bredde}`;
 
 SKJOLD.kategorier = { vinter: 'Vinter', spilletoej: 'Spilletøj', fritid: 'Fritid', udstyr: 'Udstyr' };
 
 SKJOLD.produkter = [
-  // Skjolds nye vinterprodukter – vises øverst under "Nyt i shoppen" på forsiden.
-  { id: 'halsedisse', navn: 'Halsedisse', besk: 'Sort fleece med klublogo, rød-hvid stribe og snøre', kategori: 'vinter', pris: 129, billede: '-zY8KPxe8nQ', stoerrelser: ['Junior', 'Voksen'], ny: true },
-  { id: 'hue', navn: 'Hue', besk: 'Sort med opslag, klublogo og rød-hvid stribe', kategori: 'vinter', pris: 149, billede: 'y7NBxZuL-_w', stoerrelser: ['Junior', 'Voksen'], ny: true },
-  { id: 'vanter', navn: 'Vanter', besk: 'Sorte fingerhandsker med klublogo og rød-hvid stribe', kategori: 'vinter', pris: 149, billede: '5Ke4wx1QzQ0', stoerrelser: ['4–6 år', '7–10 år', '11–14 år', 'Voksen'], ny: true },
-  { id: 'hjemmebanetroeje', navn: 'Hjemmebanetrøje', kategori: 'spilletoej', pris: 399, billede: '3vaOgYLFtQs', stoerrelser: ['116', '128', '140', '152', 'S', 'M', 'L', 'XL'] },
-  { id: 'haettetroeje', navn: 'Hættetrøje', kategori: 'fritid', pris: 449, billede: '_qOlEX0SuuQ', stoerrelser: ['128', '140', '152', 'S', 'M', 'L', 'XL'] },
-  { id: 'haettetroeje-dame', navn: 'Hættetrøje, dame', kategori: 'fritid', pris: 449, billede: 'n-yh8Trp0EI', stoerrelser: ['XS', 'S', 'M', 'L'] },
-  { id: 'kampbold', navn: 'Kampbold str. 5', kategori: 'udstyr', pris: 249, billede: 'iOITF7T87kU', stoerrelser: ['Str. 5'] },
-  { id: 'traeningsbold', navn: 'Træningsbold str. 4', kategori: 'udstyr', pris: 179, billede: 'p7N4GuhFqdU', stoerrelser: ['Str. 4'] },
-  { id: 'juniorbold', navn: 'Juniorbold str. 3', kategori: 'udstyr', pris: 149, billede: 'lBhhnhndpE0', stoerrelser: ['Str. 3'] },
-  { id: 'sportstaske', navn: 'Sportstaske', kategori: 'udstyr', pris: 299, billede: 'ewfTDxL0iXc', stoerrelser: ['Én størrelse'] },
-  { id: 'gavekort', navn: 'Gavekort', kategori: 'fritid', pris: 200, billede: 'bZIbDiD3dnY', stoerrelser: ['200 kr.', '300 kr.', '500 kr.'] },
+  { id: 'halsedisse', navn: 'Halsedisse', besk: 'Sort fleece med klublogo og rød-hvid stribe', kategori: 'vinter', pris: 129, billede: null, stoerrelser: ['Junior', 'Voksen'], ny: true },
+  { id: 'hue', navn: 'Hue', besk: 'Sort med opslag, klublogo og rød-hvid stribe', kategori: 'vinter', pris: 149, billede: null, stoerrelser: ['Junior', 'Voksen'], ny: true },
+  { id: 'vanter', navn: 'Vanter', besk: 'Sorte handsker med klublogo og rød-hvid stribe', kategori: 'vinter', pris: 149, billede: null, stoerrelser: ['4–6 år', '7–10 år', '11–14 år', 'Voksen'], ny: true },
+  { id: 'hjemmebanetroeje', navn: 'Hjemmebanetrøje', besk: 'Klubbens spilletrøje', kategori: 'spilletoej', pris: 399, billede: null, stoerrelser: ['116', '128', '140', '152', 'S', 'M', 'L', 'XL'] },
+  { id: 'haettetroeje', navn: 'Hættetrøje', besk: 'Blød hættetrøje med logo', kategori: 'fritid', pris: 449, billede: null, stoerrelser: ['128', '140', '152', 'S', 'M', 'L', 'XL'] },
+  { id: 'kampbold', navn: 'Kampbold', besk: 'Størrelse 5', kategori: 'udstyr', pris: 249, billede: null, stoerrelser: ['Str. 5'] },
+  { id: 'traeningsbold', navn: 'Træningsbold', besk: 'Størrelse 3 og 4', kategori: 'udstyr', pris: 179, billede: null, stoerrelser: ['Str. 3', 'Str. 4'] },
+  { id: 'gavekort', navn: 'Gavekort', besk: 'Til klubshoppen', kategori: 'fritid', pris: 200, billede: null, stoerrelser: ['200 kr.', '300 kr.', '500 kr.'] },
 ];
 
-// Øvrige stockfotos brugt på siden (Unsplash-licens).
+/*
+ * Fotos fra Wikimedia Commons (frie licenser – se `kredit`).
+ * Hentes via Special:FilePath, som peger på den aktuelle billedfil.
+ */
 SKJOLD.fotos = {
-  hero: '1OMOf8AAm20', // dreng sparker til bolden
-  hold: 'tGEIzxnHNs0', // spillere samlet på banen
-  piger: 'otYC4eoGJGg', // kvinder spiller fodbold
-  bold: 'jA7YI8Lpobg', // bold på græs
-  medlem: '3pWhtpa0l0Q', // dreng sparker til bolden
-  stoevler: '4GG0asoE6jg', // fodboldstøvler
+  hero: { fil: 'FPYC_Soccer_-_02.JPG', kredit: 'Jarek Tuszyński, CC BY-SA' },
+  ungdom: { fil: 'FPYC_Soccer_-_01.JPG', kredit: 'Jarek Tuszyński, CC BY-SA' },
+  kamp: { fil: 'FPYC_Soccer_-_03.JPG', kredit: 'Jarek Tuszyński, CC BY-SA' },
+  dreng: { fil: 'A-Boy-Playing-Football.jpg', kredit: 'Pavan Prasad, CC0' },
+  bold: { fil: 'Football_on_fall_ground_(Unsplash).jpg', kredit: 'Unsplash via Wikimedia Commons, CC0' },
+  faelledparken: { fil: 'Fælledparken_og_Parken_stadion_aerial.jpg', kredit: 'Stig Nygaard, CC BY' },
 };
+
+SKJOLD.fotoUrl = (navn, bredde = 1600) => {
+  const f = SKJOLD.fotos[navn];
+  return f ? `https://commons.wikimedia.org/wiki/Special:FilePath/${encodeURIComponent(f.fil)}?width=${bredde}` : null;
+};
+SKJOLD.fotoSide = (navn) => `https://commons.wikimedia.org/wiki/File:${encodeURIComponent(SKJOLD.fotos[navn].fil)}`;

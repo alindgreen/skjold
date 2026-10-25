@@ -11,14 +11,14 @@
 <body data-side="shop" data-rod="../">
   <main>
     <div class="sidetop wrap">
-      <h1>Klubshop</h1>
-      <p>Spilletøj, fritidstøj og udstyr i Skjolds farver. Nyhed: vinterkollektionen med halsedisse, hue og vanter.</p>
+      <span class="overtitel">Klubshop</span>
+      <h1>Shop</h1>
+      <p>Spilletøj, fritidstøj og udstyr til alle i Skjold.</p>
     </div>
-    <section class="blok" style="padding-top:24px">
+    <section class="blok" style="padding-top:32px">
       <div class="wrap">
         <div class="filtre" role="group" aria-label="Kategorier" id="filtre"></div>
         <div class="produkter" id="alle"></div>
-        <p class="lille" style="margin-top:40px">Designforslag: varer og priser er eksempler. Fotos: Unsplash.</p>
       </div>
     </section>
   </main>
@@ -36,7 +36,9 @@
       alle.querySelectorAll('.produkt').forEach((p) => (p.hidden = k !== 'alle' && p.dataset.kategori !== k));
     };
     filtre.querySelectorAll('button').forEach((b) => (b.onclick = () => { vaelg(b.dataset.k); history.replaceState(null, '', b.dataset.k === 'alle' ? location.pathname : '#' + b.dataset.k); }));
-    vaelg(SKJOLD.kategorier[location.hash.slice(1)] ? location.hash.slice(1) : 'alle');
+    const start = location.hash.slice(1);
+    vaelg(SKJOLD.kategorier[start] ? start : 'alle');
+    window.addEventListener('hashchange', () => SKJOLD.kategorier[location.hash.slice(1)] && vaelg(location.hash.slice(1)));
   </script>
 </body>
 </html>

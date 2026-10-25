@@ -12,44 +12,44 @@
 <body data-side="forside" data-rod="./">
   <main>
     <section class="hero">
-      <div class="foto" data-foto-navn="hero" data-ivrig="1" data-bredde="2000" data-alt="Dreng sparker til en fodbold på græsbanen"></div>
-      <div class="tekst"><div class="wrap">
-        <span class="etiket" style="color:#fff">Østerbro · siden 1915</span>
+      <div class="foto" data-foto="hero" data-ivrig="1" data-bredde="2400" data-alt="Børn spiller fodbold"></div>
+      <div class="tekst">
+        <span class="overtitel">Østerbro · siden 1915</span>
         <h1>Fodbold for alle</h1>
-        <p>Danmarks største fodboldklub – fra de mindste til 65+.</p>
-        <a class="knap lys" href="hold/">Find dit hold</a>
-      </div></div>
+        <a class="knap hvid" href="hold/">Find dit hold</a>
+      </div>
     </section>
 
     <section class="blok">
       <div class="wrap">
         <div class="sektionshoved">
-          <div><span class="etiket">Nyt i shoppen</span><h2>Klar til vinteren</h2></div>
-          <a href="shop/">Se hele shoppen →</a>
+          <span class="overtitel">Nyhed i shoppen</span>
+          <h2>Vinterkollektionen</h2>
+          <p>Halsedisse, hue og vanter i sort med klublogo og rød-hvid stribe.</p>
         </div>
-        <p class="lille" style="margin:-12px 0 28px;max-width:52ch">Halsedisse, hue og vanter i Skjolds nye vinterkollektion – til træning, kamp og tilskuerpladsen.</p>
-        <div class="produkter" id="nyheder"></div>
+        <div class="produkter tre" id="nyheder"></div>
+        <p style="text-align:center;margin-top:64px"><a class="link" href="shop/">Se hele shoppen</a></p>
       </div>
     </section>
 
-    <section class="blok graa">
-      <div class="wrap">
-        <div class="indgange">
-          <a class="indgang" href="hold/"><div class="foto" data-foto-navn="hold" data-bredde="900" data-alt="Spillere samlet på banen"></div><h3>Find dit hold</h3><p class="lille">Drenge, piger, senior og motion</p></a>
-          <a class="indgang" href="medlem/"><div class="foto" data-foto-navn="medlem" data-bredde="900" data-alt="Barn spiller fodbold"></div><h3>Bliv medlem</h3><p class="lille">Sådan kommer du i gang</p></a>
-          <a class="indgang" href="shop/"><div class="foto" data-foto-navn="piger" data-bredde="900" data-alt="Kvinder spiller fodbold"></div><h3>Klubshop</h3><p class="lille">Spilletøj, fritid og udstyr</p></a>
+    <section class="blok sand">
+      <div class="wrap split">
+        <div class="foto" data-foto="ungdom" data-bredde="1400" data-alt="Ungdomsspillere i kamp"></div>
+        <div class="tekstdel">
+          <span class="overtitel">Klubben</span>
+          <h2>Danmarks største fodboldklub</h2>
+          <p>Skjold blev stiftet i 1915 i Brumleby på Østerbro. I dag spiller over 3.500 medlemmer fodbold i klubben – fra de mindste i Bold og Bevægelse til seniorer og 65+.</p>
+          <p><a class="link" href="om/">Læs om klubben</a></p>
         </div>
       </div>
     </section>
 
     <section class="blok">
-      <div class="wrap split">
-        <div class="foto" data-foto-navn="bold" data-bredde="1200" data-alt="Fodbold på græs"></div>
-        <div>
-          <span class="etiket">Om Skjold</span>
-          <h2>Et fællesskab for hele Østerbro</h2>
-          <p>Skjold blev stiftet i 1915 i Brumleby og spillede de første år gadekampe mod nabogaderne. I dag er vi Danmarks største fodboldklub med over 3.500 medlemmer, der træner i Fælledparken og Ryparken.</p>
-          <a class="knap kant" href="om/">Læs om klubben</a>
+      <div class="wrap">
+        <div class="indgange">
+          <a class="indgang" href="hold/"><div class="foto" data-foto="kamp" data-bredde="1000" data-alt="Ungdomskamp"></div><span class="overtitel">Hold og træning</span><h3>Find dit hold</h3></a>
+          <a class="indgang" href="medlem/"><div class="foto" data-foto="dreng" data-bredde="1000" data-alt="Dreng spiller fodbold"></div><span class="overtitel">Medlemskab</span><h3>Bliv medlem</h3></a>
+          <a class="indgang" href="om/"><div class="foto" data-foto="faelledparken" data-bredde="1000" data-alt="Fælledparken set fra luften"></div><span class="overtitel">Baner</span><h3>Fælledparken og Ryparken</h3></a>
         </div>
       </div>
     </section>
@@ -58,7 +58,7 @@
   <script src="js/site.js"></script>
   <script>
     const el = document.getElementById('nyheder');
-    el.innerHTML = SKJOLD.produkter.slice(0, 4).map(SKJOLD.produktkort).join('');
+    el.innerHTML = SKJOLD.produkter.filter((p) => p.ny).map(SKJOLD.produktkort).join('');
     SKJOLD.bindKoeb(el);
   </script>
 </body>
