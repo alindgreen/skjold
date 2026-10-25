@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="da">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Shop – BK Skjold (designforslag)</title>
+  <meta name="theme-color" content="#ffffff">
+  <link rel="icon" href="../img/favicon.png" type="image/png">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body data-side="shop" data-rod="../">
+  <main>
+    <div class="sidetop wrap">
+      <h1>Klubshop</h1>
+      <p>Spilletøj, fritidstøj og udstyr i Skjolds farver. Nyhed: vinterkollektionen med halsedisse, hue og vanter.</p>
+    </div>
+    <section class="blok" style="padding-top:24px">
+      <div class="wrap">
+        <div class="filtre" role="group" aria-label="Kategorier" id="filtre"></div>
+        <div class="produkter" id="alle"></div>
+        <p class="lille" style="margin-top:40px">Designforslag: varer og priser er eksempler. Fotos: Unsplash.</p>
+      </div>
+    </section>
+  </main>
+  <script src="../js/produkter.js"></script>
+  <script src="../js/site.js"></script>
+  <script>
+    const filtre = document.getElementById('filtre');
+    const alle = document.getElementById('alle');
+    const kategorier = [['alle', 'Alle'], ...Object.entries(SKJOLD.kategorier)];
+    filtre.innerHTML = kategorier.map(([k, n]) => `<button data-k="${k}" aria-pressed="false">${n}</button>`).join('');
+    alle.innerHTML = SKJOLD.produkter.map(SKJOLD.produktkort).join('');
+    SKJOLD.bindKoeb(alle);
+    const vaelg = (k) => {
+      filtre.querySelectorAll('button').forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.k === k)));
+      alle.querySelectorAll('.produkt').forEach((p) => (p.hidden = k !== 'alle' && p.dataset.kategori !== k));
+    };
+    filtre.querySelectorAll('button').forEach((b) => (b.onclick = () => { vaelg(b.dataset.k); history.replaceState(null, '', b.dataset.k === 'alle' ? location.pathname : '#' + b.dataset.k); }));
+    vaelg(SKJOLD.kategorier[location.hash.slice(1)] ? location.hash.slice(1) : 'alle');
+  </script>
+</body>
+</html>

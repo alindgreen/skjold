@@ -1,29 +1,27 @@
 # BK Skjold – designforslag til ny hjemmeside
 
-Et designforslag til en ny hjemmeside for **Boldklubben Skjold** på Østerbro –
-Danmarks største fodboldklub målt på medlemmer.
+Et enkelt, luftigt designforslag til en ny hjemmeside for **Boldklubben Skjold**
+på Østerbro – Danmarks største fodboldklub målt på medlemmer – med klubshop.
 
 > Dette er et designforslag og **ikke** BK Skjolds officielle hjemmeside. Den
 > officielle side er [bkskjold.dk](https://www.bkskjold.dk).
 
-Siden er bygget med forældre og nye medlemmer som den vigtigste målgruppe:
-det skal være let at finde sit hold, træningstider, priser og hvordan man
-melder sig ind.
+Opbygningen er inspireret af enkle webshops som elou.dk: hvid baggrund, centreret
+logo, få menupunkter, store billeder og et rent produktgitter. Farverne er
+næsten kun sort og hvid, så klubbens logo står frem.
 
 ## Sider
 
 ```
-index.html        Forside: bliv medlem, find dit hold, Skjold i tal, nyheder, kampe, sponsorer
-hold/             Holdoversigt med filter (drenge, piger, senior, motion, anden aktivitet)
-traening/         Baner (Fælledparken, Ryparken, Østerbro Stadion) og træningstider
-medlem/           Sådan melder du dig ind + kontingent og betalingsregler
-frivillig/        Bliv træner eller frivillig
-kampe/            Kampe og resultater (link til DBU)
-sponsorer/        Partnere og bliv partner
-om/               Historie, kontakt og kontortider
-css/style.css     Design i klubbens farver (rød, guld, hvid) – lyst og mørkt tema
-js/site.js        Fælles header, menu (mobilvenlig) og footer
-img/              Klubbens logo
+index.html     Forside: stort billede, "Nyt i shoppen" (vinterkollektionen), tre indgange, om klubben
+shop/          Klubshop med kategorier (vinter, spilletøj, fritid, udstyr), størrelser og kurv
+hold/          Hold og træning (drenge, piger, senior, motion, andet) samt baner
+medlem/        Sådan melder du dig ind + kontingent
+om/            Historie, bliv træner, bliv partner og kontakt
+css/style.css  Design
+js/produkter.js  Shoppens varer og stockfotos – ret her for at skifte varer og billeder
+js/site.js     Fælles header, footer, kurv og produktkort
+img/           Klubbens logo
 ```
 
 ## Kør lokalt
@@ -33,17 +31,23 @@ python3 -m http.server 8000
 # åbn http://localhost:8000
 ```
 
-Ingen build-step. Alle stier er relative, så siden også virker på GitHub Pages.
+## Shoppen
+
+- Varerne ligger i `js/produkter.js`. Vinterkollektionen (halsedisse, hue og
+  vanter) er markeret `ny: true` og vises på forsiden.
+- Et produkt kan bruge et eget billede: læg filen i `img/produkter/` og skriv
+  stien i `billede`, fx `'img/produkter/hue.jpg'`.
+- Kurven gemmes i browseren. "Gå til kassen" viser, hvor betaling (fx MobilePay
+  og kort via en webshop-løsning) skal kobles på.
+
+## Billeder
+
+Stockfotos fra [Unsplash](https://unsplash.com) under Unsplash-licensen (gratis,
+ingen kreditering påkrævet). Billederne hentes direkte fra Unsplash i browseren.
 
 ## Indhold og forbehold
 
-- **Fakta** (adresse, kontakt, kontortider, kontingent, indmeldelse, historie,
-  baner, hold) er hentet fra bkskjold.dk og offentlige kilder via websøgning.
-  Kilden står ved hvert afsnit. Alt skal bekræftes af klubben før brug.
-- **Uenige kilder:** Medlemstallet er sat til "3.500+" efter DBU's opgørelse for
-  2023. Kontingentet følger bkskjold.dk/medlemskab, da den ældre kontingentside
-  viser andre beløb.
-- **Pladsholdere:** Nyheder, træningstider pr. hold, kampprogram og sponsorer
-  kunne ikke hentes og er markeret med en gul "Pladsholder"-ramme med link til
-  de rigtige sider. Intet indhold er opfundet.
-- **Logo:** Klubbens logo er stillet til rådighed til designforslaget.
+- Klubfakta (adresse, kontakt, kontingent, indmeldelse, historie, baner, hold)
+  er hentet fra bkskjold.dk og offentlige kilder via websøgning og skal
+  bekræftes af klubben. Kilden står ved hvert afsnit.
+- Varer og priser i shoppen er eksempler.
