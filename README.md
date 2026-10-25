@@ -17,7 +17,7 @@ den eneste farve på siden.
 index.html     Forside: stort billede, "Nyt i shoppen" (vinterkollektionen), tre indgange, om klubben
 shop/          Klubshop med kategorier (vinter, spilletøj, fritid, udstyr), størrelser og kurv
 hold/          Hold og træning (drenge, piger, senior, motion, andet) samt baner
-medlem/        Sådan melder du dig ind + kontingent
+medlem/        Sådan bliver du medlem (7 trin), kontingent og FAQ
 om/            Historie, bliv træner, bliv partner og kontakt
 css/style.css  Design
 js/produkter.js  Shoppens varer og stockfotos – ret her for at skifte varer og billeder

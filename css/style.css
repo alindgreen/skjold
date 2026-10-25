@@ -126,8 +126,25 @@ section.blok.sand { background: var(--sand); }
 .liste li span:last-child { color: var(--graa); text-align: right; }
 .kolonner { display: grid; gap: 64px; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
 .trin { list-style: none; counter-reset: t; padding: 0; margin: 0; }
-.trin li { counter-increment: t; padding: 20px 0 20px 56px; border-bottom: 1px solid var(--linje); position: relative; }
-.trin li::before { content: counter(t, decimal-leading-zero); position: absolute; left: 0; top: 18px; font-family: var(--serif); font-size: 1.6rem; color: var(--graa); }
+.trin > li { counter-increment: t; padding: 28px 0 28px 72px; border-bottom: 1px solid var(--linje); position: relative; }
+.trin > li::before { content: counter(t, decimal-leading-zero); position: absolute; left: 0; top: 26px; font-family: var(--serif); font-size: 1.6rem; color: var(--graa); }
+.trinwrap { max-width: 760px; }
+.tekstblok { max-width: 760px; }
+.trin h3 { margin-bottom: 8px; }
+.trin p { margin: 0 0 8px; }
+.trin .note { font-size: 0.9rem; color: var(--graa); border-left: 1px solid var(--linje); padding-left: 16px; }
+.punkter { margin: 8px 0 0; padding-left: 18px; color: var(--graa); }
+.punkter li { padding: 3px 0; }
+.faq { border-top: 1px solid var(--linje); margin-top: 32px; }
+.faq details { border-bottom: 1px solid var(--linje); }
+.faq summary { list-style: none; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 24px; padding: 24px 0; font-family: var(--serif); font-size: 1.45rem; line-height: 1.2; }
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after { content: "+"; font-family: var(--sans); font-weight: 300; font-size: 1.5rem; color: var(--graa); transition: transform .2s; }
+.faq details[open] summary::after { transform: rotate(45deg); }
+.faq .svar { padding: 0 0 32px; color: var(--graa); }
+.faq .svar h4 { font-family: var(--sans); font-size: 0.72rem; font-weight: 500; text-transform: uppercase; letter-spacing: 0.2em; color: var(--sort); margin: 28px 0 8px; }
+.faq .svar p { margin: 0 0 10px; }
+.faq .svar .liste { margin-bottom: 20px; }
 
 /* Sidetop */
 .sidetop { padding: 96px 0 40px; text-align: center; }
