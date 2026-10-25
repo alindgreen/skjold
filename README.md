@@ -55,3 +55,9 @@ egne billeder.
   er hentet fra bkskjold.dk og offentlige kilder via websøgning og skal
   bekræftes af klubben. Kilden står ved hvert afsnit.
 - Varer og priser i shoppen er eksempler.
+
+## Ny version
+
+CSS og JavaScript hentes med et versionsnummer (`?v=…`) i alle HTML-filer, så
+browseren ikke bruger en gammel, gemt udgave. Ret nummeret i alle filer, når
+`css/style.css`, `js/produkter.js` eller `js/site.js` ændres.
