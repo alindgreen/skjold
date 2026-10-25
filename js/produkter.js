@@ -17,7 +17,6 @@ SKJOLD.produkter = [
   { id: 'kamptroeje', navn: 'Kamptrøje', besk: 'Rød-hvid hjemmebanetrøje med broderet logo', kategori: 'spilletoej', pris: 399, billede: 'img/produkter/kamptroeje.jpg', stoerrelser: ['116', '128', '140', '152', 'S', 'M', 'L', 'XL'] },
   { id: 'shorts', navn: 'Kampshorts', besk: 'Sorte shorts med broderet klublogo', kategori: 'spilletoej', pris: 199, billede: 'img/produkter/shorts.jpg', stoerrelser: ['116', '128', '140', '152', 'S', 'M', 'L', 'XL'] },
   { id: 'halstoerklaede', navn: 'Halstørklæde', besk: 'Rødt strikket halstørklæde med BK Skjold og logo', kategori: 'fritid', pris: 179, billede: 'img/produkter/halstoerklaede.jpg', stoerrelser: ['One size'] },
-  { id: 'mulepose', navn: 'Mulepose', besk: 'Rød mulepose med logo i guld', kategori: 'fritid', pris: 79, billede: 'img/produkter/mulepose.jpg', stoerrelser: ['One size'] },
   { id: 'drikkedunk', navn: 'Drikkedunk', besk: 'Hvid drikkedunk med rødt låg og klublogo', kategori: 'udstyr', pris: 59, billede: 'img/produkter/drikkedunk.jpg', stoerrelser: ['One size'] },
   { id: 'traenerjakke', navn: 'Trænerjakke', besk: 'Lang, foret vinterjakke med hætte, rød-hvid stribe og TRÆNER på ryggen', kategori: 'spilletoej', pris: 899, billede: 'img/produkter/traenerjakke.jpg', stoerrelser: ['XS', 'S', 'M', 'L', 'XL', 'XXL'] },
   { id: 'stroemper', navn: 'Strømper', besk: 'Sorte fodboldstrømper med klublogo og rød-hvid stribe', kategori: 'spilletoej', pris: 89, billede: 'img/produkter/stroemper.jpg', stoerrelser: ['28–31', '32–35', '36–39', '40–43', '44–47'] },
