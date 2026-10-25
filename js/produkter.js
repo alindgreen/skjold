@@ -37,4 +37,5 @@ SKJOLD.fotos = {
   flag: 'img/fotos/flag.jpg',
   aaretsKlub: 'img/fotos/aarets-klub.jpg',
   boldnet: 'img/fotos/boldnet.jpg',
+  tribune: 'img/fotos/tribune.jpg',
 };
