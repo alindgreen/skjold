@@ -53,7 +53,7 @@
           <p>Boldklubben Skjold<br>Per Henrik Lings Allé 10<br>2100 København Ø</p>
         </div>
         <div><h3>Shop</h3><a href="${rod}shop/#vinter">Vinterkollektion</a><a href="${rod}shop/#spilletoej">Spilletøj</a><a href="${rod}shop/#fritid">Fritid</a><a href="${rod}shop/#udstyr">Udstyr</a></div>
-        <div><h3>Klubben</h3><a href="${rod}hold/">Hold og træning</a><a href="${rod}medlem/">Bliv medlem</a><a href="${rod}om/">Om klubben</a></div>
+        <div><h3>Klubben</h3><a href="${rod}hold/">Hold og træning</a><a href="${rod}medlem/">Bliv medlem</a><a href="${rod}om/">Om klubben</a><a href="${rod}partnere/">Bliv partner</a></div>
         <div><h3>Kontakt</h3><a href="tel:+4535253525">35 25 35 25</a><a href="mailto:bkskjold@bkskjold.dk">bkskjold@bkskjold.dk</a><a href="https://www.facebook.com/bkskjold1915/">Facebook</a></div>
         <p class="kilder">Designforslag. Klubfakta fra bkskjold.dk – skal bekræftes af klubben. Priser er eksempler.${kreditter ? ` Fotos fra Wikimedia Commons: ${kreditter}.` : ''}</p>
       </div>

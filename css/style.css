@@ -125,6 +125,9 @@ section.blok.sand { background: var(--sand); }
 .liste li { display: flex; justify-content: space-between; gap: 20px; padding: 16px 0; border-bottom: 1px solid var(--linje); }
 .liste li span:last-child { color: var(--graa); text-align: right; }
 .kolonner { display: grid; gap: 64px; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+.kolonner.fire { grid-template-columns: repeat(4, 1fr); gap: 40px; }
+@media (max-width: 1000px) { .kolonner.fire { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 600px) { .kolonner.fire { grid-template-columns: 1fr; } }
 .trin { list-style: none; counter-reset: t; padding: 0; margin: 0; }
 .trin > li { counter-increment: t; padding: 28px 0 28px 72px; border-bottom: 1px solid var(--linje); position: relative; }
 .trin > li::before { content: counter(t, decimal-leading-zero); position: absolute; left: 0; top: 26px; font-family: var(--serif); font-size: 1.6rem; color: var(--graa); }

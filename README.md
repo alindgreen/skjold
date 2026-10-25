@@ -18,7 +18,8 @@ index.html     Forside: stort billede, "Nyt i shoppen" (vinterkollektionen), tre
 shop/          Klubshop med kategorier (vinter, spilletøj, fritid, udstyr), størrelser og kurv
 hold/          Hold og træning (drenge, piger, senior, motion, andet) samt baner
 medlem/        Sådan bliver du medlem (7 trin), kontingent og FAQ
-om/            Historie, bliv træner, bliv partner og kontakt
+om/            Historie, Skjold-modellen, bliv træner og kontakt
+partnere/      Bliv partner: eksponering og kontakt
 css/style.css  Design
 js/produkter.js  Shoppens varer og stockfotos – ret her for at skifte varer og billeder
 js/site.js     Fælles header, footer, kurv og produktkort
