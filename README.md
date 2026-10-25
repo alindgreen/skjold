@@ -6,9 +6,10 @@ på Østerbro – Danmarks største fodboldklub målt på medlemmer – med klub
 > Dette er et designforslag og **ikke** BK Skjolds officielle hjemmeside. Den
 > officielle side er [bkskjold.dk](https://www.bkskjold.dk).
 
-Opbygningen er inspireret af enkle webshops som elou.dk: hvid baggrund, centreret
-logo, få menupunkter, store billeder og et rent produktgitter. Farverne er
-næsten kun sort og hvid, så klubbens logo står frem.
+Udtrykket er lyst og eksklusivt: hvid og sandfarvet baggrund, elegante
+serif-overskrifter (Cormorant Garamond), centreret logo, få menupunkter, store
+billeder og masser af luft. Der bruges kun sort og hvid, så klubbens logo er
+den eneste farve på siden.
 
 ## Sider
 
@@ -42,8 +43,13 @@ python3 -m http.server 8000
 
 ## Billeder
 
-Stockfotos fra [Unsplash](https://unsplash.com) under Unsplash-licensen (gratis,
-ingen kreditering påkrævet). Billederne hentes direkte fra Unsplash i browseren.
+Fotos fra [Wikimedia Commons](https://commons.wikimedia.org) under frie licenser
+(CC0, CC BY og CC BY-SA). De hentes direkte fra Commons i browseren, og
+fotograf og licens krediteres i footeren på de sider, hvor billedet bruges.
+Billederne er samlet i `SKJOLD.fotos` i `js/produkter.js`.
+
+Kan et billede ikke hentes, vises en lys flade med klubbens logo i stedet for
+et tomt felt. Produkterne vises på samme måde, indtil de får egne billeder.
 
 ## Indhold og forbehold
 
