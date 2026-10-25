@@ -11,9 +11,9 @@ window.SKJOLD = window.SKJOLD || {};
 SKJOLD.kategorier = { vinter: 'Vinter', spilletoej: 'Spilletøj', fritid: 'Fritid', udstyr: 'Udstyr' };
 
 SKJOLD.produkter = [
-  { id: 'halsedisse', navn: 'Halsedisse', besk: 'Sort fleece med klublogo og rød-hvid stribe', kategori: 'vinter', pris: 129, billede: null, stoerrelser: ['Junior', 'Voksen'], ny: true },
-  { id: 'hue', navn: 'Hue', besk: 'Sort med opslag, klublogo og rød-hvid stribe', kategori: 'vinter', pris: 149, billede: null, stoerrelser: ['Junior', 'Voksen'], ny: true },
-  { id: 'vanter', navn: 'Vanter', besk: 'Sorte handsker med klublogo og rød-hvid stribe', kategori: 'vinter', pris: 149, billede: null, stoerrelser: ['4–6 år', '7–10 år', '11–14 år', 'Voksen'], ny: true },
+  { id: 'halsedisse', navn: 'Halsedisse', besk: 'Sort fleece med klublogo og rød-hvid stribe', kategori: 'vinter', pris: 129, billede: 'img/produkter/halsedisse.jpg', stoerrelser: ['Junior', 'Voksen'], ny: true },
+  { id: 'hue', navn: 'Hue', besk: 'Sort med opslag, klublogo og rød-hvid stribe', kategori: 'vinter', pris: 149, billede: 'img/produkter/hue.jpg', stoerrelser: ['Junior', 'Voksen'], ny: true },
+  { id: 'vanter', navn: 'Vanter', besk: 'Sorte handsker med klublogo og rød-hvid stribe', kategori: 'vinter', pris: 149, billede: 'img/produkter/vanter.jpg', stoerrelser: ['4–6 år', '7–10 år', '11–14 år', 'Voksen'], ny: true },
   { id: 'kamptroeje', navn: 'Kamptrøje', besk: 'Rød-hvid hjemmebanetrøje med broderet logo', kategori: 'spilletoej', pris: 399, billede: 'img/produkter/kamptroeje.jpg', stoerrelser: ['116', '128', '140', '152', 'S', 'M', 'L', 'XL'] },
   { id: 'shorts', navn: 'Kampshorts', besk: 'Sorte shorts med broderet klublogo', kategori: 'spilletoej', pris: 199, billede: 'img/produkter/shorts.jpg', stoerrelser: ['116', '128', '140', '152', 'S', 'M', 'L', 'XL'] },
   { id: 'halstoerklaede', navn: 'Halstørklæde', besk: 'Rødt strikket halstørklæde med BK Skjold og logo', kategori: 'fritid', pris: 179, billede: 'img/produkter/halstoerklaede.jpg', stoerrelser: ['One size'] },
