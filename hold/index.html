@@ -3,68 +3,51 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Vores hold – BK Skjold (designforslag)</title>
-  <meta name="theme-color" content="#e00a20">
+  <title>Hold og træning – BK Skjold (designforslag)</title>
+  <meta name="theme-color" content="#ffffff">
   <link rel="icon" href="../img/favicon.png" type="image/png">
   <link rel="stylesheet" href="../css/style.css">
 </head>
 <body data-side="hold" data-rod="../">
   <main>
-    <div class="sidehoved"><div class="wrap">
-      <h1>Vores hold</h1>
-      <p>Skjold har hold for alle aldre – fordelt på årgange og niveauer. Find dit hold, og tilmeld dig via formularen på holdets side.</p>
-    </div></div>
+    <div class="sidetop wrap">
+      <h1>Hold og træning</h1>
+      <p>Hold for alle aldre – fordelt på årgange og niveauer. Vi træner primært i Fælledparken og Ryparken.</p>
+    </div>
+
+    <section class="blok" style="padding-top:24px">
+      <div class="wrap kolonner">
+        <div><h3>Drenge</h3><ul class="liste"><li><span>Årgangshold</span><span>2010 og yngre</span></li><li><span>U19</span><span></span></li><li><span>U21</span><span>A og B</span></li></ul></div>
+        <div><h3>Piger</h3><ul class="liste"><li><span>Årgangshold</span><span>2011/12–2021</span></li><li><span>Mix-hold</span><span>2021 og 2022</span></li><li><span>U21</span><span></span></li></ul></div>
+        <div><h3>Senior</h3><ul class="liste"><li><span>1. Herre</span><span>A-truppen</span></li><li><span>Kvindesenior</span><span>1.–3. hold</span></li><li><span>Veteraner</span><span></span></li></ul></div>
+        <div><h3>Motion</h3><ul class="liste"><li><span>Kvinder</span><span>20–39 og 40+</span></li><li><span>Mænd</span><span>21–39 og 65+</span></li><li><span>Floorball</span><span>65+</span></li></ul></div>
+        <div><h3>Andet</h3><ul class="liste"><li><span>Bold og Bevægelse</span><span>1–4 år</span></li><li><span>Petanque</span><span>65+</span></li><li><span>BAT</span><span>60+</span></li></ul></div>
+      </div>
+    </section>
+
+    <section class="blok graa">
+      <div class="wrap split">
+        <div class="foto" data-foto-navn="hold" data-bredde="1200" data-alt="Spillere samlet på banen"></div>
+        <div>
+          <span class="etiket">Baner</span>
+          <h2>Fælledparken og Ryparken</h2>
+          <p>Vi træner primært i Fælledparken og på Ryparken Idrætsanlæg. Seniorholdene spiller hjemmekampe på Østerbro Stadion.</p>
+          <p>Træningstiderne opdateres to gange om året – 1. november og 1. april – og du tilmelder dig træning i Holdsport.</p>
+          <a class="knap kant" href="https://www.bkskjold.dk/om-os/baner-traeningstider">Se træningstider</a>
+        </div>
+      </div>
+    </section>
 
     <section class="blok">
-      <div class="wrap">
-        <div class="filtre" role="group" aria-label="Filtrér hold">
-          <button class="chip" data-filter="alle" aria-pressed="true">Alle</button>
-          <button class="chip" data-filter="drenge" aria-pressed="false">Drenge</button>
-          <button class="chip" data-filter="piger" aria-pressed="false">Piger</button>
-          <button class="chip" data-filter="senior" aria-pressed="false">Senior</button>
-          <button class="chip" data-filter="motion" aria-pressed="false">Motion</button>
-          <button class="chip" data-filter="andet" aria-pressed="false">Anden aktivitet</button>
-        </div>
-
-        <div class="holdgruppe" data-kategori="drenge">
-          <h3>⚽ Drenge</h3>
-          <p>Årgangshold fra de yngste og op til ungdom – samt U19 og U21 A og B.</p>
-          <ul class="holdliste"><li>U21 A og B</li><li>U19</li><li>Årgangshold fra 2010 og yngre</li></ul>
-        </div>
-
-        <div class="holdgruppe" data-kategori="piger">
-          <h3>⚽ Piger</h3>
-          <p>Pigehold på årgange fra 2011/12 til 2021 samt U21 – og mix-hold for de yngste.</p>
-          <ul class="holdliste"><li>U21</li><li>Årgangshold 2011/12–2021</li><li>Årgang 2021 og 2022 mix</li></ul>
-        </div>
-
-        <div class="holdgruppe" data-kategori="senior">
-          <h3>🏆 Senior</h3>
-          <p>Klubbens seniorhold for mænd og kvinder.</p>
-          <ul class="holdliste"><li>1. Herre (A-truppen)</li><li>Kvindesenior 1.–3. hold</li><li>Veteraner</li></ul>
-        </div>
-
-        <div class="holdgruppe" data-kategori="motion">
-          <h3>🏃 Motionsfodbold</h3>
-          <p>Fodbold for sjov, motion og fællesskab.</p>
-          <ul class="holdliste"><li>Kvinder 20–39</li><li>Kvinder 40+</li><li>Mænd 21–39</li><li>Mænd 65+</li><li>"De Store Helte"</li><li>Floorball 65+</li></ul>
-        </div>
-
-        <div class="holdgruppe" data-kategori="andet">
-          <h3>🌟 Anden aktivitet</h3>
-          <ul class="holdliste"><li>Bold og Bevægelse (1–4 år)</li><li>Petanque 65+</li><li>BAT 60+</li></ul>
-        </div>
-
-        <div class="kort" style="margin-top:28px">
-          <h3>Sådan er holdene bygget op</h3>
-          <p style="margin:0">Skjold bruger som udgangspunkt ikke 1.-, 2.- og 3.-hold – undtagen i de ældste ungdomsårgange og i seniorfodbold.</p>
-        </div>
-
-        <p class="lille" style="margin-top:20px">Holdoversigten er en sammenfatning af <a href="https://www.bkskjold.dk/hold">bkskjold.dk/hold</a> og skal bekræftes af klubben. Den aktuelle liste med træningstider og tilmelding pr. hold findes på klubbens side.</p>
+      <div class="wrap" style="text-align:center">
+        <h2>Klar til at spille?</h2>
+        <p class="lille" style="margin:0 auto 20px;max-width:46ch">Find dit hold på holdoversigten, og udfyld tilmeldingen på holdets side.</p>
         <a class="knap" href="../medlem/">Bliv medlem</a>
+        <p class="lille" style="margin-top:28px">Kilde: <a href="https://www.bkskjold.dk/hold">bkskjold.dk/hold</a> og <a href="https://www.bkskjold.dk/om-os/baner-traeningstider">Baner &amp; træningstider</a>. Skal bekræftes af klubben.</p>
       </div>
     </section>
   </main>
+  <script src="../js/produkter.js"></script>
   <script src="../js/site.js"></script>
 </body>
 </html>
