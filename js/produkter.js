@@ -34,4 +34,7 @@ SKJOLD.fotos = {
   stadion: 'img/fotos/stadion.jpg',
   frokost: 'img/fotos/frokost.jpg',
   medlemmer: 'img/fotos/medlemmer.jpg',
+  flag: 'img/fotos/flag.jpg',
+  aaretsKlub: 'img/fotos/aarets-klub.jpg',
+  boldnet: 'img/fotos/boldnet.jpg',
 };
