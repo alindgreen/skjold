@@ -83,6 +83,13 @@ strong { font-weight: 500; }
 /* Sektioner */
 section.blok { padding: 110px 0; }
 section.blok.sand { background: var(--sand); }
+.aarets { text-align: center; padding: 72px 0; border-bottom: 1px solid var(--linje); }
+.aarets .aarets-titel { font-family: var(--serif); font-size: clamp(2.4rem, 6vw, 4.6rem); line-height: 1; margin: 14px 0 22px; }
+.aarets .aarets-titel span { font-style: italic; }
+.aarets p:not(.aarets-titel) { color: var(--graa); max-width: 52ch; margin: 0 auto; }
+.aarets-foto { aspect-ratio: 3 / 2; max-width: 1040px; margin: 56px auto 0; }
+.foto.banner { aspect-ratio: 21 / 8; margin-bottom: 56px; }
+@media (max-width: 600px) { .foto.banner { aspect-ratio: 16 / 9; } }
 .sektionshoved { text-align: center; margin-bottom: 56px; }
 .sektionshoved p { color: var(--graa); max-width: 52ch; margin: 0 auto; }
 
@@ -92,6 +99,8 @@ section.blok.sand { background: var(--sand); }
 @media (max-width: 720px) { .produkter { grid-template-columns: repeat(2, 1fr); gap: 40px 16px; } }
 .produkt { text-align: center; }
 .produkt .foto { aspect-ratio: 4 / 5; margin-bottom: 18px; }
+.produkt .foto:not(.mangler) { background: #fff; }
+.produkt .foto img { object-fit: contain; padding: 6%; }
 .produkt .foto.mangler::after { opacity: 0.5; background-size: 30%; }
 .produkt .maerkat { position: absolute; z-index: 1; top: 14px; left: 14px; font-size: 0.62rem; text-transform: uppercase; letter-spacing: 0.22em; background: #fff; padding: 4px 10px; }
 .produkt h3 { font-size: 1.3rem; margin-bottom: 2px; }
@@ -125,9 +134,29 @@ section.blok.sand { background: var(--sand); }
 .liste li { display: flex; justify-content: space-between; gap: 20px; padding: 16px 0; border-bottom: 1px solid var(--linje); }
 .liste li span:last-child { color: var(--graa); text-align: right; }
 .kolonner { display: grid; gap: 64px; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+.kolonner.fire { grid-template-columns: repeat(4, 1fr); gap: 40px; }
+@media (max-width: 1000px) { .kolonner.fire { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 600px) { .kolonner.fire { grid-template-columns: 1fr; } }
 .trin { list-style: none; counter-reset: t; padding: 0; margin: 0; }
-.trin li { counter-increment: t; padding: 20px 0 20px 56px; border-bottom: 1px solid var(--linje); position: relative; }
-.trin li::before { content: counter(t, decimal-leading-zero); position: absolute; left: 0; top: 18px; font-family: var(--serif); font-size: 1.6rem; color: var(--graa); }
+.trin > li { counter-increment: t; padding: 28px 0 28px 72px; border-bottom: 1px solid var(--linje); position: relative; }
+.trin > li::before { content: counter(t, decimal-leading-zero); position: absolute; left: 0; top: 26px; font-family: var(--serif); font-size: 1.6rem; color: var(--graa); }
+.trinwrap { max-width: 760px; }
+.tekstblok { max-width: 760px; }
+.trin h3 { margin-bottom: 8px; }
+.trin p { margin: 0 0 8px; }
+.trin .note { font-size: 0.9rem; color: var(--graa); border-left: 1px solid var(--linje); padding-left: 16px; }
+.punkter { margin: 8px 0 0; padding-left: 18px; color: var(--graa); }
+.punkter li { padding: 3px 0; }
+.faq { border-top: 1px solid var(--linje); margin-top: 32px; }
+.faq details { border-bottom: 1px solid var(--linje); }
+.faq summary { list-style: none; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 24px; padding: 24px 0; font-family: var(--serif); font-size: 1.45rem; line-height: 1.2; }
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after { content: "+"; font-family: var(--sans); font-weight: 300; font-size: 1.5rem; color: var(--graa); transition: transform .2s; }
+.faq details[open] summary::after { transform: rotate(45deg); }
+.faq .svar { padding: 0 0 32px; color: var(--graa); }
+.faq .svar h4 { font-family: var(--sans); font-size: 0.72rem; font-weight: 500; text-transform: uppercase; letter-spacing: 0.2em; color: var(--sort); margin: 28px 0 8px; }
+.faq .svar p { margin: 0 0 10px; }
+.faq .svar .liste { margin-bottom: 20px; }
 
 /* Sidetop */
 .sidetop { padding: 96px 0 40px; text-align: center; }

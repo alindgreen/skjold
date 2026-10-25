@@ -11,10 +11,14 @@ window.SKJOLD = window.SKJOLD || {};
 SKJOLD.kategorier = { vinter: 'Vinter', spilletoej: 'Spilletøj', fritid: 'Fritid', udstyr: 'Udstyr' };
 
 SKJOLD.produkter = [
-  { id: 'halsedisse', navn: 'Halsedisse', besk: 'Sort fleece med klublogo og rød-hvid stribe', kategori: 'vinter', pris: 129, billede: null, stoerrelser: ['Junior', 'Voksen'], ny: true },
-  { id: 'hue', navn: 'Hue', besk: 'Sort med opslag, klublogo og rød-hvid stribe', kategori: 'vinter', pris: 149, billede: null, stoerrelser: ['Junior', 'Voksen'], ny: true },
-  { id: 'vanter', navn: 'Vanter', besk: 'Sorte handsker med klublogo og rød-hvid stribe', kategori: 'vinter', pris: 149, billede: null, stoerrelser: ['4–6 år', '7–10 år', '11–14 år', 'Voksen'], ny: true },
-  { id: 'hjemmebanetroeje', navn: 'Hjemmebanetrøje', besk: 'Klubbens spilletrøje', kategori: 'spilletoej', pris: 399, billede: null, stoerrelser: ['116', '128', '140', '152', 'S', 'M', 'L', 'XL'] },
+  { id: 'halsedisse', navn: 'Halsedisse', besk: 'Sort fleece med klublogo og rød-hvid stribe', kategori: 'vinter', pris: 129, billede: 'img/produkter/halsedisse.jpg', stoerrelser: ['Junior', 'Voksen'], ny: true },
+  { id: 'hue', navn: 'Hue', besk: 'Sort med opslag, klublogo og rød-hvid stribe', kategori: 'vinter', pris: 149, billede: 'img/produkter/hue.jpg', stoerrelser: ['Junior', 'Voksen'], ny: true },
+  { id: 'vanter', navn: 'Vanter', besk: 'Sorte handsker med klublogo og rød-hvid stribe', kategori: 'vinter', pris: 149, billede: 'img/produkter/vanter.jpg', stoerrelser: ['4–6 år', '7–10 år', '11–14 år', 'Voksen'], ny: true },
+  { id: 'kamptroeje', navn: 'Kamptrøje', besk: 'Rød-hvid hjemmebanetrøje med broderet logo', kategori: 'spilletoej', pris: 399, billede: 'img/produkter/kamptroeje.jpg', stoerrelser: ['116', '128', '140', '152', 'S', 'M', 'L', 'XL'] },
+  { id: 'shorts', navn: 'Kampshorts', besk: 'Sorte shorts med broderet klublogo', kategori: 'spilletoej', pris: 199, billede: 'img/produkter/shorts.jpg', stoerrelser: ['116', '128', '140', '152', 'S', 'M', 'L', 'XL'] },
+  { id: 'halstoerklaede', navn: 'Halstørklæde', besk: 'Rødt strikket halstørklæde med BK Skjold og logo', kategori: 'fritid', pris: 179, billede: 'img/produkter/halstoerklaede.jpg', stoerrelser: ['One size'] },
+  { id: 'mulepose', navn: 'Mulepose', besk: 'Rød mulepose med logo i guld', kategori: 'fritid', pris: 79, billede: 'img/produkter/mulepose.jpg', stoerrelser: ['One size'] },
+  { id: 'drikkedunk', navn: 'Drikkedunk', besk: 'Hvid drikkedunk med rødt låg og klublogo', kategori: 'udstyr', pris: 59, billede: 'img/produkter/drikkedunk.jpg', stoerrelser: ['One size'] },
   { id: 'haettetroeje', navn: 'Hættetrøje', besk: 'Blød hættetrøje med logo', kategori: 'fritid', pris: 449, billede: null, stoerrelser: ['128', '140', '152', 'S', 'M', 'L', 'XL'] },
   { id: 'kampbold', navn: 'Kampbold', besk: 'Størrelse 5', kategori: 'udstyr', pris: 249, billede: null, stoerrelser: ['Str. 5'] },
   { id: 'traeningsbold', navn: 'Træningsbold', besk: 'Størrelse 3 og 4', kategori: 'udstyr', pris: 179, billede: null, stoerrelser: ['Str. 3', 'Str. 4'] },
@@ -22,20 +26,16 @@ SKJOLD.produkter = [
 ];
 
 /*
- * Fotos fra Wikimedia Commons (frie licenser – se `kredit`).
- * Hentes via Special:FilePath, som peger på den aktuelle billedfil.
+ * Klubbens egne fotos i img/fotos/.
  */
 SKJOLD.fotos = {
-  hero: { fil: 'FPYC_Soccer_-_02.JPG', kredit: 'Jarek Tuszyński, CC BY-SA' },
-  ungdom: { fil: 'FPYC_Soccer_-_01.JPG', kredit: 'Jarek Tuszyński, CC BY-SA' },
-  kamp: { fil: 'FPYC_Soccer_-_03.JPG', kredit: 'Jarek Tuszyński, CC BY-SA' },
-  dreng: { fil: 'A-Boy-Playing-Football.jpg', kredit: 'Pavan Prasad, CC0' },
-  bold: { fil: 'Football_on_fall_ground_(Unsplash).jpg', kredit: 'Unsplash via Wikimedia Commons, CC0' },
-  faelledparken: { fil: 'Fælledparken_og_Parken_stadion_aerial.jpg', kredit: 'Stig Nygaard, CC BY' },
+  fejring: 'img/fotos/fejring.jpg',
+  kampdag: 'img/fotos/kampdag.jpg',
+  stadion: 'img/fotos/stadion.jpg',
+  frokost: 'img/fotos/frokost.jpg',
+  medlemmer: 'img/fotos/medlemmer.jpg',
+  flag: 'img/fotos/flag.jpg',
+  aaretsKlub: 'img/fotos/aarets-klub.jpg',
+  boldnet: 'img/fotos/boldnet.jpg',
+  tribune: 'img/fotos/tribune.jpg',
 };
-
-SKJOLD.fotoUrl = (navn, bredde = 1600) => {
-  const f = SKJOLD.fotos[navn];
-  return f ? `https://commons.wikimedia.org/wiki/Special:FilePath/${encodeURIComponent(f.fil)}?width=${bredde}` : null;
-};
-SKJOLD.fotoSide = (navn) => `https://commons.wikimedia.org/wiki/File:${encodeURIComponent(SKJOLD.fotos[navn].fil)}`;
