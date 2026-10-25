@@ -96,6 +96,8 @@ section.blok.sand { background: var(--sand); }
 @media (max-width: 720px) { .produkter { grid-template-columns: repeat(2, 1fr); gap: 40px 16px; } }
 .produkt { text-align: center; }
 .produkt .foto { aspect-ratio: 4 / 5; margin-bottom: 18px; }
+.produkt .foto:not(.mangler) { background: #fff; }
+.produkt .foto img { object-fit: contain; padding: 6%; }
 .produkt .foto.mangler::after { opacity: 0.5; background-size: 30%; }
 .produkt .maerkat { position: absolute; z-index: 1; top: 14px; left: 14px; font-size: 0.62rem; text-transform: uppercase; letter-spacing: 0.22em; background: #fff; padding: 4px 10px; }
 .produkt h3 { font-size: 1.3rem; margin-bottom: 2px; }
